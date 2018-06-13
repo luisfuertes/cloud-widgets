@@ -1,3 +1,5 @@
-import TextInput from './atoms/textinput'
+import TextInput from './atoms/textinput/'
 
-exports.TextInput = TextInput
+export default {
+  TextInput
+}
