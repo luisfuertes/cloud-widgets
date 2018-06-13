@@ -1,27 +1,48 @@
-var path = require('path')
-module.exports = {
-  entry: './src/index.js',
+const webpack = require('webpack')
+
+const config = {
+  entry: {
+    index: ['./src/index.js']
+  },
   output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'index.js',
-    libraryTarget: 'commonjs2' // THIS IS THE MOST IMPORTANT LINE! :mindblow: I wasted more than 2 days until realize this was the line most important in all this guide.
+    path: __dirname + '/lib',
+    filename: '[name].js',
+    libraryTarget: 'umd',
+    library: 'cloud-widgets'
+  },
+  externals: {
+    react: {
+      root: 'React',
+      commonjs2: 'react',
+      commonjs: 'react',
+      amd: 'react'
+    },
+    'react-dom': {
+      root: 'ReactDOM',
+      commonjs: 'react-dom',
+      commonjs2: 'react-dom',
+      amd: 'react-dom'
+    }
   },
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.js$/,
-        include: path.resolve(__dirname, 'src'),
-        exclude: /(node_modules|bower_components|build)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+        test: /.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel',
+        query: {
+          presets: ['es2015', 'react', 'stage-0']
         }
       }
     ]
   },
-  externals: {
-    react: 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
-  }
+  plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ comments: false }),
+    new webpack.DefinePlugin({
+      'process.env': { NODE_ENV: JSON.stringify('production') }
+    })
+  ]
 }
+
+module.exports = config
