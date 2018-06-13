@@ -1,3 +1,5 @@
 import TextInput from './atoms/textinput'
 
-export { TextInput }
+module.exports = {
+  TextInput: TextInput
+}

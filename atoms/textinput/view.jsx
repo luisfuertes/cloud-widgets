@@ -1,10 +1,6 @@
 // React
 import React from 'react';
 
-// Css
-import './styles.css'
-
-
 export default class View extends React.Component {
 
   static defaultProps = {
