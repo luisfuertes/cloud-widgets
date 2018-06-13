@@ -1,2 +1,4 @@
-webpack.config.js
-webpack.demo.config.js
+webpack.local.config.js
+webpack.production.config.js
+.eslintrc
+.gitignore
