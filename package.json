@@ -1,6 +1,6 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "react": "^16.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0"
   },
   "prettier": {
     "printWidth": 150,
