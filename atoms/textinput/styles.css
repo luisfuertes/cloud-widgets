@@ -1,0 +1,69 @@
+/* Holder */
+.inner-text-holder { position:relative; padding-top: 20px; padding-bottom: 20px; width: 100%; }
+
+/* Input */
+.inner-text-holder input { font-size: 14px; line-height: 30px; width: 100%; padding: 0; border-bottom: 2px solid #787993; display:block; color: #787993; 
+    font-family: 'main-semibold'; letter-spacing: 0.44px; background: transparent; }
+    .inner-text-holder input:active, 
+    .inner-text-holder input:focus { outline:none; }
+    
+/* Label */
+.inner-text-holder label { color: #787993; font-size: 14px; position: absolute; pointer-events: none; left: 0; top: 20px; font-weight: normal; 
+    line-height: 30px; letter-spacing: 0.44px; font-family: 'main-semibold'; }
+    .inner-text-holder .label-active,
+    .inner-text-holder input:focus ~ label { top: 0; font-size: 11px; color:#11A8AD; line-height: 14px; padding: 3px 0; letter-spacing: 0.20px; }
+
+/* Validation errors */
+
+.inner-text-holder.is-error label,
+.inner-text-holder.is-error .label-active { color: #BF3634; }
+.inner-text-holder.is-error input:focus ~ label { color: #787993; }
+
+.inner-text-holder .error-label { color: #BF3634; font-size: 11px; font-family: 'main-semibold'; position: absolute; right: 0; bottom: 0; 
+    line-height: 20px; text-align: right; letter-spacing: 0.20px; }
+
+
+/* Bar */
+.inner-text-holder .bar { position:relative; display: block; width: 100%; }
+.inner-text-holder .bar:before, .inner-text-holder .bar:after { content:''; height: 2px; width:0; bottom: 0; position:absolute; background: #11A8AD;
+    transition: 0.6s ease all; -moz-transition: 0.6s ease all; -webkit-transition: 0.6s ease all; }
+    .bar:before { left:50%; }
+    .bar:after { right:50%; }
+    input:focus ~ .bar:before, input:focus ~ .bar:after { width:50%; }
+
+.highlight { position:absolute; height: 30px; width:100%; top: 20px; left:0; pointer-events:none; opacity:1; background: transparent; }
+
+.inner-text-holder.is-error .bar:before, 
+.inner-text-holder.is-error .bar:after { background: #BF3634; width: 50%; }
+
+
+
+@media only screen and ( min-width : 48em ) {
+    
+    /* Holder */
+    .inner-text-holder { padding-top: 25px; }
+
+    /* Input */
+    .inner-text-holder input { font-size: 16px; line-height: 40px; letter-spacing: 0.76px; }
+    
+    /* Label */
+    .inner-text-holder label { font-size: 16px; top: 25px; line-height: 40px; letter-spacing: 0.76px; }
+    .inner-text-holder .label-active,
+    .inner-text-holder input:focus ~ label { font-size: 13px; line-height: 15px; padding: 5px 0; letter-spacing: 0.35px; }
+    
+    /* Validation errors */
+    .inner-text-holder .error-label { font-size: 13px; line-height: 20px; }
+
+    /* Bar */
+    .highlight { height: 40px; top: 25px; }
+    
+}
+
+@media only screen and ( min-width : 64em ) {
+
+
+}
+
+@media only screen and ( min-width : 75em ) {
+
+}

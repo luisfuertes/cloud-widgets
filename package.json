@@ -1,0 +1,21 @@
+{
+  "name": "cloud-widgets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.0"
+  },
+  "prettier": {
+    "printWidth": 150,
+    "parser": "flow",
+    "semi": false,
+    "singleQuote": true,
+    "bracketSpacing": true
+  }
+}
