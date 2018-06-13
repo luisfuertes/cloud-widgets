@@ -58,31 +58,23 @@ export default class View extends React.Component {
   }
 
   render() {
-      
-    const inputWithText = this.props.value ? true : false
-    const labelStyle = inputWithText ? 'label-active' : ''
-    const errorStyle = this.state.error ? 'is-error' : ''
     
     return (
 
-        <div className = { 'inner-text-holder ' + errorStyle }>
-
-        <input 
-          id            = { this.props.id } 
-          type          = { this.props.type } 
-          onChange      = { (e) => this._onChange(e) } 
-          onFocus       = { (e) => this._onFocus(e) } 
-          onBlur        = { (e) => this._onBlur(e) } 
-          value         = { this.props.value } 
-          placeholder   = { this.props.placeholder } 
-          autoComplete  = { "off" }
-          autoFocus     = { this.props.autoFocus }
-        />
-
-        <span className = { 'highlight' }></span>
-        <span className = { 'bar' }></span>
-        <label htmlFor={ 'rw_1_input' } className={ 'ts ts-quick ' + labelStyle }>{ this.props.label }</label>
-        { this.state.error && <span className = { 'error-label' }>{ this.state.error }</span> }
+        <div>
+          <label htmlFor={ this.props.id } >{ this.props.label }</label>
+          <input 
+            id            = { this.props.id } 
+            type          = { this.props.type } 
+            onChange      = { (e) => this._onChange(e) } 
+            onFocus       = { (e) => this._onFocus(e) } 
+            onBlur        = { (e) => this._onBlur(e) } 
+            value         = { this.props.value } 
+            placeholder   = { this.props.placeholder } 
+            autoComplete  = { "off" }
+            autoFocus     = { this.props.autoFocus }
+          /> 
+          { this.state.error && <span>{ this.state.error }</span> }
       </div>
     )
   }

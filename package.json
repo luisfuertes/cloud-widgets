@@ -1,10 +1,10 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "description": "",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "prepare": "rm -rf ./dist && npm run build"
+    "build": "webpack"
   },
   "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",
   "license": "ISC",
@@ -25,12 +25,16 @@
     "react-dom": ">=15.0.1"
   },
   "devDependencies": {
-    "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.9.0",
-    "react": ">=15.0.1",
-    "react-dom": ">=15.0.1",
-    "sass-loader": "^7.0.3",
-    "style-loader": "^0.21.0"
+    "babel-core": "^6.21.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
   }
 }
