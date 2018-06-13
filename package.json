@@ -1,9 +1,10 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.11",
+  "version": "1.0.14",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "upload": "npm run build && npm publish",
     "build": "webpack"
   },
   "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",

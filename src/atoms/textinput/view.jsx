@@ -11,10 +11,6 @@ export default class View extends React.Component {
     placeholder         : '',
     validation          : null,
     onChange            : () => {},
-    containerClassName  : '',
-    inputClassName      : '',
-    labelClassName      : '',
-    errorClassName      : '',
     autoFocus           : false,
   }
 
@@ -31,7 +27,7 @@ export default class View extends React.Component {
     if(this.props.validation) {
       const value = ( v != null ) ? v : this.props.value
       const validation = this.props.validation(value)
-      this.setState({ touched: true, valid: validation.isValid, error: validation.error })
+      this.setState({ valid: validation.isValid, error: validation.error })
       return validation.isValid
     } else {
       return true
@@ -43,17 +39,15 @@ export default class View extends React.Component {
   }
 
   _onBlur(e) {
-    //this.setState({ touched: false, valid: true })
     this.validate()
   }
 
   _onFocus(e) {
-    //this.validate()
+    this.setState({ touched: true })
   }
 
   _onChange(e) {
-    let value = e.target.value
-    //this.validate(value)
+    const value = e.target.value
     this.props.onChange(value)
   }
 
