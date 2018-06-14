@@ -43,7 +43,7 @@ export default class View extends React.Component {
     this.validate()
     this.props.onBlur(e)
   }
-git
+
   _onFocus(e) {
     this.setState({ touched: true })
     this.props.onFocus(e)
