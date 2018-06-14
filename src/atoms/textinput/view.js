@@ -1,19 +1,18 @@
-import React from 'react';
+import React from 'react'
 import InputTextStyled from './styled'
 
 export default class View extends React.Component {
-
   static defaultProps = {
-    id                  : null,
-    label               : '',
-    value               : '',
-    type                : 'text',
-    placeholder         : '',
-    validation          : null,
-    onChange            : () => {},
-    onBlur              : () => {},
-    onFocus             : () => {},
-    autoFocus           : false,
+    id: null,
+    label: '',
+    value: '',
+    type: 'text',
+    placeholder: '',
+    validation: null,
+    onChange: () => {},
+    onBlur: () => {},
+    onFocus: () => {},
+    autoFocus: false
   }
 
   constructor(props) {
@@ -21,13 +20,13 @@ export default class View extends React.Component {
     this.state = {
       touched: false,
       valid: true,
-      error: '',
+      error: ''
     }
   }
 
-  validate(v) {
-    if(this.props.validation) {
-      const value = ( v != null ) ? v : this.props.value
+  validate(v) {
+    if (this.props.validation) {
+      const value = v != null ? v : this.props.value
       const validation = this.props.validation(value)
       this.setState({ valid: validation.isValid, error: validation.error })
       return validation.isValid
@@ -57,21 +56,21 @@ export default class View extends React.Component {
 
   render() {
     return (
-        <InputTextStyled>
-          <label htmlFor={ this.props.id } >{ this.props.label }</label>
-          <input 
-            id            = { this.props.id } 
-            type          = { this.props.type } 
-            onChange      = { (e) => this._onChange(e) } 
-            onFocus       = { (e) => this._onFocus(e) } 
-            onBlur        = { (e) => this._onBlur(e) } 
-            value         = { this.props.value } 
-            placeholder   = { this.props.placeholder } 
-            autoComplete  = { "off" }
-            autoFocus     = { this.props.autoFocus }
-          /> 
-          { this.state.touched && this.state.error && <span>{ this.state.error }</span> }
-      </InputTextStyled>
+      <div className={this.props.className}>
+        <label htmlFor={this.props.id}>{this.props.label}</label>
+        <input
+          id={this.props.id}
+          type={this.props.type}
+          onChange={e => this._onChange(e)}
+          onFocus={e => this._onFocus(e)}
+          onBlur={e => this._onBlur(e)}
+          value={this.props.value}
+          placeholder={this.props.placeholder}
+          autoComplete={'off'}
+          autoFocus={this.props.autoFocus}
+        />
+        {this.state.touched && this.state.error && <span>{this.state.error}</span>}
+      </div>
     )
   }
 }
