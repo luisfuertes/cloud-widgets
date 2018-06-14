@@ -1,3 +1,3 @@
-import component from './view.jsx'
+import component from './view.js'
 
 export default component
