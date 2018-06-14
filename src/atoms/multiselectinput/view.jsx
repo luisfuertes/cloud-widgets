@@ -2,10 +2,8 @@
 import React from 'react';
 
 //Components
-import Select from 'react-select';
-import _ from 'lodash'
-import './react-select.css'
-import './styles.css'
+import Select from 'react-select'
+import 'react-select/dist/react-select.css'
 
 export default class View extends React.Component {
 

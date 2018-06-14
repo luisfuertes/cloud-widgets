@@ -1,6 +1,0 @@
-.textareainput-container { display: flex; flex-direction: column;  margin-top: 10px; margin-bottom: 10px; }
-.textareainput-input { background: white; height: 200px; padding: 0px 10px; margin-top: 10px; border: 1.2px solid rgb(197, 197, 197);
-    border-radius: 4px; font-size: 16px;}
-.textareainput-input:read-only { background: #dcdcdc; color: #565a5c; font-style: italic; }
-.textareainput-label { font-size: 14px; margin-bottom: 5px;  display: flex; flex-direction: column;}
-.textareainput-error { color: red; padding-top: 5px; text-align: center; font-size: 14px;}
