@@ -1,5 +1,5 @@
-// React
 import React from 'react';
+import InputTextStyled from './styled'
 
 export default class View extends React.Component {
 
@@ -52,10 +52,8 @@ export default class View extends React.Component {
   }
 
   render() {
-    
     return (
-
-        <div>
+        <InputTextStyled>
           <label htmlFor={ this.props.id } >{ this.props.label }</label>
           <input 
             id            = { this.props.id } 
@@ -69,7 +67,7 @@ export default class View extends React.Component {
             autoFocus     = { this.props.autoFocus }
           /> 
           { this.state.error && <span>{ this.state.error }</span> }
-      </div>
+      </InputTextStyled>
     )
   }
 }

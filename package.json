@@ -1,6 +1,6 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.14",
+  "version": "1.0.18",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -9,7 +9,9 @@
   },
   "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "styled-components": "^3.3.2"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/luisfuertes/cloud-widgets.git"
