@@ -11,6 +11,8 @@ export default class View extends React.Component {
     placeholder         : '',
     validation          : null,
     onChange            : () => {},
+    onBlur              : () => {},
+    onFocus             : () => {},
     autoFocus           : false,
   }
 
@@ -40,10 +42,12 @@ export default class View extends React.Component {
 
   _onBlur(e) {
     this.validate()
+    this.props.onBlur(e)
   }
 
   _onFocus(e) {
     this.setState({ touched: true })
+    this.props.onFocus(e)
   }
 
   _onChange(e) {
@@ -66,7 +70,7 @@ export default class View extends React.Component {
             autoComplete  = { "off" }
             autoFocus     = { this.props.autoFocus }
           /> 
-          { this.state.error && <span>{ this.state.error }</span> }
+          { this.state.touched && this.state.error && <span>{ this.state.error }</span> }
       </InputTextStyled>
     )
   }
