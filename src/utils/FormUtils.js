@@ -1,4 +1,4 @@
-function validateForm(refs) {
+export function validateForm(refs) {
   let valid = true
   _.map(refs, ref => {
     if (ref.validate != null) {
@@ -11,7 +11,7 @@ function validateForm(refs) {
   return valid
 }
 
-function emailValidate(value) {
+export function emailValidate(value) {
   if (!value) {
     return { isValid: false, error: 'Campo obligatorio' }
   }
@@ -23,7 +23,7 @@ function emailValidate(value) {
   }
 }
 
-function passwordValidate(value1, value2, minCharacters = 7) {
+export function passwordValidate(value1, value2, minCharacters = 7) {
   if (value1 && value2 && value1 != value2) {
     return { isValid: false, error: 'Las contraseñas no coinciden' }
   } else if (value1.length > minCharacters) {
@@ -33,7 +33,7 @@ function passwordValidate(value1, value2, minCharacters = 7) {
   }
 }
 
-function phoneValidation(phone) {
+export function phoneValidation(phone) {
   //let regex = /^\+((?:9[679]|8[035789]|6[789]|5[90]|42|3[578]|2[1-689])|9[0-58]|8[1246]|6[0-6]|5[1-8]|4[013-9]|3[0-469]|2[70]|7|1)(?:\W*\d){0,13}\d$/
   let regex = /^[967]{1}[0-9]{8}$/
   if (!phone) {
@@ -44,5 +44,3 @@ function phoneValidation(phone) {
     return { isValid: true, error: '' }
   }
 }
-
-export { validateForm, emailValidate, passwordValidate, phoneValidation }

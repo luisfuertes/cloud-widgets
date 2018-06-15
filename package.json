@@ -1,8 +1,8 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.32",
+  "version": "1.0.38",
   "description": "",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "upload": "npm run build && npm publish && npm run build-storybook",
     "build": "webpack",
