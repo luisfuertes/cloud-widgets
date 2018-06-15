@@ -7,10 +7,11 @@ module.exports = {
     Button: './src/atoms/button/index.js',
     SelectInput: './src/atoms/selectinput/index.js',
     TextAreaInput: './src/atoms/textareainput/index.js',
-    MultiSelectInput: './src/atoms/multiselectinput/index.js'
+    MultiSelectInput: './src/atoms/multiselectinput/index.js',
+    FormUtils: './src/utils/FormUtils.js'
   },
   output: {
-    path: path.resolve(__dirname, 'lib'),
+    path: path.resolve(__dirname, './'),
     filename: '[name].js',
     chunkFilename: '[name].chunk.js',
     libraryTarget: 'commonjs2',
