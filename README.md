@@ -3,7 +3,6 @@
 [Storybook documentation](https://luisfuertes.github.io/cloud-widgets/index.html)    
     
 <br>
-<br>
 
 ## TextInput
 ```
@@ -22,10 +21,10 @@ static defaultProps = {
 ```
 
 ```
-import TextInput from 'cloud-widgets/lib/TextInput'
+import { Widgets, FormUtils } from 'cloud-widgets'
 import styled from 'styled-components'
 
-const TextInputStyled = styled(TextInput)`
+const TextInputStyled = styled(Widgets.TextInput)`
   label {} 
   input {} 
   span {} //error
@@ -43,10 +42,10 @@ static defaultProps = {
 ```
 
 ```
-import Button from 'cloud-widgets/lib/Button'
+import { Widgets, FormUtils } from 'cloud-widgets'
 import styled from 'styled-components'
 
-const ButtonStyled = styled(Button)`
+const ButtonStyled = styled(Widgets.Button)`
   button {} 
   button span {} //label
   button span div {} //spinner
