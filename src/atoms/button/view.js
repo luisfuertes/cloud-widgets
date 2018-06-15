@@ -18,12 +18,12 @@ export default class View extends Component {
   _renderContent() {
     if (this.props.isFetching) {
       return (
-        <span className="button-label">
+        <span>
           <Spinner color={'#11A8AD'} name={'circle'} fadeIn={'none'} />
         </span>
       )
     } else {
-      return <span className="button-label">{this.props.label}</span>
+      return <span>{this.props.label}</span>
     }
   }
 
