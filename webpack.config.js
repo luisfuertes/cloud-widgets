@@ -3,11 +3,11 @@ var path = require('path')
 module.exports = {
   mode: 'production',
   entry: {
-    textinput: './src/atoms/textinput/index.js',
-    button: './src/atoms/button/index.js',
-    selectinput: './src/atoms/selectinput/index.js',
-    textareainput: './src/atoms/textareainput/index.js',
-    multiselectinput: './src/atoms/multiselectinput/index.js'
+    TextInput: './src/atoms/textinput/index.js',
+    Button: './src/atoms/button/index.js',
+    SelectInput: './src/atoms/selectinput/index.js',
+    TextAreaInput: './src/atoms/textareainput/index.js',
+    MultiSelectInput: './src/atoms/multiselectinput/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'lib'),

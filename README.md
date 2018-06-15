@@ -15,10 +15,10 @@ static defaultProps = {
 ```
 
 ```
-import TextInput from 'cloud-widgets/lib/textinput'
+import TextInput from 'cloud-widgets/lib/TextInput'
 import styled from 'styled-components'
 
-const ButtonStyled = styled(Button)`
+const TextInputStyled = styled(TextInput)`
   label {} 
   input {} 
   span {} //error
@@ -36,7 +36,7 @@ static defaultProps = {
 ```
 
 ```
-import Button from 'cloud-widgets/lib/button'
+import Button from 'cloud-widgets/lib/Button'
 import styled from 'styled-components'
 
 const ButtonStyled = styled(Button)`
