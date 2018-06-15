@@ -7,7 +7,7 @@
     "upload": "npm run build && npm publish",
     "build": "webpack",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o doc"
   },
   "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",
   "license": "ISC",
