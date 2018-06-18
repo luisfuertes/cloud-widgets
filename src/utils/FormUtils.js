@@ -1,9 +1,8 @@
-export function validateForm(refs) {
+export function validateForm(formInputs) {
   let valid = true
-  _.map(refs, ref => {
-    if (ref.validate != null) {
-      let isValid = ref.validate()
-      if (!isValid) {
+  _.map(formInputs, input => {
+    if (input.validate != null) {
+      if (!input.validate()) {
         valid = false
       }
     }

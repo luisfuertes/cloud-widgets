@@ -40,7 +40,7 @@ export default class View extends React.Component {
     if(this.props.validation) {
       const value = ( v != null ) ? v : this.props.value
       const validation = this.props.validation(value)
-      this.setState({ touched: true, valid: validation.isValid, error: validation.error })
+      this.setState({ valid: validation.isValid, error: validation.error, touched: true })
       return validation.isValid
     } else {
       return true
