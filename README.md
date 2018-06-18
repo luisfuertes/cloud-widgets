@@ -51,3 +51,45 @@ const ButtonStyled = styled(Widgets.Button)`
   button span div {} //spinner
 ` 
 ```
+
+
+## Usage
+```
+import _ from 'lodash'
+import { FormUtils } from 'cloud-widgets'
+import { TextInput, SelectInput, Button } from '../../atoms' // Import from our styled components wrapper
+...
+
+  constructor(props) {
+    super(props)
+    this.formInputs = {}
+  }
+
+  _onSubmit(e) {
+    e.preventDefault()
+    if (FormUtils.validateForm(this.formInputs)) {
+      const data = {
+        firstName: _.get(this.state, 'firstName', ''),
+        lastName: _.get(this.state, 'lastName', ''),
+      }
+      this.props.addClubContact(data)
+    }
+  }
+    
+...
+  render() {
+    return (
+      <TextInput
+        innerRef={i => {
+          this.formInputs.firstName = i
+        }}
+        id={'firstName'}
+        label={i18n.firstName + '*'}
+        value={this.state.firstName}
+        placeholder={' '}
+        onChange={firstName => this.setState({ firstName })}
+        validation={v => FormUtils.mandatoryValidate(v)}
+      />
+    )
+  }
+
