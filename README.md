@@ -1,63 +1,36 @@
 
-# Storybook
+## Storybook
 [Storybook documentation](https://luisfuertes.github.io/cloud-widgets/index.html)    
-    
-<br>
 
-## TextInput
-```
-static defaultProps = {
-    id: null,
-    label: '',
-    value: '',
-    type: 'text',
-    placeholder: '',
-    validation: null,
-    onChange: () => {},
-    onBlur: () => {},
-    onFocus: () => {},
-    autoFocus: false
-}
-```
 
-```
-import { Widgets, FormUtils } from 'cloud-widgets'
-import styled from 'styled-components'
+## Inputs
 
-const TextInputStyled = styled(Widgets.TextInput)`
-  label {} 
-  input {} 
-  span {} //error
-` 
-```
+### TextInput
 
-## Button
-```
-static defaultProps = {
-    label: '',
-    onClick: null,
-    isFetching: false,
-    enabled: true
-}
-```
+| Prop name     | Type     | Description                            | Default    |
+|---------------|----------|----------------------------------------|------------|
+| id            | String   | Input id                               | null       |
+| label         | String   | Input label                            | ""         |
+| value         | String   | Input value                            | ""         |
+| type          | String   | Input type                             | "text"     |
+| placeholder   | String   | Input placeholder                      | ""         |
+| validation    | Function | Function to validate input             | () => {}   |
+| onChange      | Function | onChange callback                      | () => {}   |
+| onBlur        | Function | onBlur callback                        | () => {}   |
+| onFocus       | Function | onFocus callback                       | () => {}   |
+| autoFocus     | Bool     | Input autofocus                        | false      |
+| className     | String   | Input classname                        | ""         |
 
-```
-import { Widgets, FormUtils } from 'cloud-widgets'
-import styled from 'styled-components'
-
-const ButtonStyled = styled(Widgets.Button)`
-  button {} 
-  button span {} //label
-  button span div {} //spinner
-` 
-```
+### TextAreaInput
+### SelectInput
+### MultiSelectInput
+### Button
 
 
 ## Usage
 ```
 import _ from 'lodash'
-import { FormUtils } from 'cloud-widgets'
-import { TextInput, SelectInput, Button } from '../../atoms' // Import from our styled components wrapper
+import { FormUtils, TextInput, Button } from 'cloud-widgets'
 
 ...
 
@@ -67,7 +40,8 @@ import { TextInput, SelectInput, Button } from '../../atoms' // Import from our 
   }
 
   _onSubmit(e) {
-    e.preventDefault()
+
+    // Function in FormUtils to validate inputs
     if (FormUtils.validateForm(this.formInputs)) {
       const data = {
         firstName: _.get(this.state, 'firstName', ''),
@@ -76,13 +50,23 @@ import { TextInput, SelectInput, Button } from '../../atoms' // Import from our 
       this.props.addClubContact(data)
     }
   }
+
+  _mandatoryValidate(value) {
+
+    // Validation function example
+    if (value != null && value != '') {
+      return { isValid: true, error: '' }
+    } else {
+      return { isValid: false, error: 'Mandatory field' }
+    }
+  }
     
 ...
 
   render() {
     return (
       <TextInput
-        innerRef={i => {
+        ref={i => {
           this.formInputs.firstName = i
         }}
         id={'firstName'}
@@ -90,7 +74,7 @@ import { TextInput, SelectInput, Button } from '../../atoms' // Import from our 
         value={this.state.firstName}
         placeholder={' '}
         onChange={firstName => this.setState({ firstName })}
-        validation={v => FormUtils.mandatoryValidate(v)}
+        validation={v => this._mandatoryValidate(v)}
       />
     )
   }

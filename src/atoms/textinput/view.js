@@ -12,7 +12,8 @@ export default class View extends React.Component {
     onChange: () => {},
     onBlur: () => {},
     onFocus: () => {},
-    autoFocus: false
+    autoFocus: false,
+    className: ''
   }
 
   constructor(props) {

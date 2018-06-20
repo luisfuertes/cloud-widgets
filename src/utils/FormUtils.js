@@ -10,12 +10,12 @@ export function validateForm(formInputs) {
   return valid
 }
 
-export function emailValidate(value) {
-  if (!value) {
+export function emailValidate(email) {
+  if (!email) {
     return { isValid: false, error: 'Campo obligatorio' }
   }
   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  if (regex.test(value)) {
+  if (regex.test(email)) {
     return { isValid: true, error: '' }
   } else {
     return { isValid: false, error: 'Introduce un email válido' }
@@ -41,5 +41,13 @@ export function phoneValidation(phone) {
     return { isValid: false, error: 'Introduce un teléfono válido' }
   } else {
     return { isValid: true, error: '' }
+  }
+}
+
+export function mandatoryValidate(value) {
+  if (value != null && value != '') {
+    return { isValid: true, error: '' }
+  } else {
+    return { isValid: false, error: 'Mandatory field' }
   }
 }
