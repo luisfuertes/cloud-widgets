@@ -27,10 +27,14 @@
 ### Button
 
 
+## Installation
+For install:
+`npm install cloud-widgets --save`
+
 ## Usage
 ```
 import _ from 'lodash'
-import { FormUtils, TextInput, Button } from 'cloud-widgets'
+import { FormUtils, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Button } from 'cloud-widgets'
 
 ...
 
