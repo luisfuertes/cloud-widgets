@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "upload": "npm run build && npm publish && npm run build-storybook",
+    "upload": "npm run build && npm run build-storybook && npm publish",
     "build": "webpack",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o docs"
