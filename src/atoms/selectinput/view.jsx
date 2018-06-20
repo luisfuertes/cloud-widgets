@@ -26,6 +26,7 @@ export default class View extends React.Component {
     backspaceRemoves    : false,
     deleteRemoves       : false,
     searchable          : false,
+    className           : '',
   }
 
   constructor(props) {
@@ -69,7 +70,7 @@ export default class View extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className={this.props.className}>
             { this.props.label && <label> { this.props.label } </label> }
             <Select
               options           = { this.props.options }

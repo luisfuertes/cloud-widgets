@@ -16,6 +16,7 @@ export default class View extends React.Component {
         onFocus             : () => {},
         rows                : null,
         cols                : null,
+        className           : '',
     }
 
     constructor(props) {
@@ -59,7 +60,7 @@ export default class View extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={this.props.className}>
                 <label htmlFor={ this.props.id } >{ this.props.label }</label>
                 <textarea 
                     id              = { this.props.id } 

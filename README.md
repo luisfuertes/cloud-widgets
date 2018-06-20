@@ -58,6 +58,7 @@ const ButtonStyled = styled(Widgets.Button)`
 import _ from 'lodash'
 import { FormUtils } from 'cloud-widgets'
 import { TextInput, SelectInput, Button } from '../../atoms' // Import from our styled components wrapper
+
 ...
 
   constructor(props) {
@@ -77,6 +78,7 @@ import { TextInput, SelectInput, Button } from '../../atoms' // Import from our 
   }
     
 ...
+
   render() {
     return (
       <TextInput
@@ -92,4 +94,6 @@ import { TextInput, SelectInput, Button } from '../../atoms' // Import from our 
       />
     )
   }
+
+```
 
