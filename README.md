@@ -47,7 +47,7 @@ import { FormUtils, TextInput, Button } from 'cloud-widgets'
         firstName: _.get(this.state, 'firstName', ''),
         lastName: _.get(this.state, 'lastName', ''),
       }
-      this.props.addClubContact(data)
+      this.props.onSubmit(data)
     }
   }
 
@@ -70,7 +70,7 @@ import { FormUtils, TextInput, Button } from 'cloud-widgets'
           this.formInputs.firstName = i
         }}
         id={'firstName'}
-        label={i18n.firstName + '*'}
+        label={'FirstName:'}
         value={this.state.firstName}
         placeholder={' '}
         onChange={firstName => this.setState({ firstName })}
