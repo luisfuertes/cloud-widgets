@@ -24,6 +24,7 @@
 ### TextAreaInput
 ### SelectInput
 ### MultiSelectInput
+### Checkbox
 ### Button
 
 
