@@ -23,12 +23,12 @@ export default class View extends React.Component {
     isFetching          : false,
     labelKey            : 'label',
     valueKey            : 'value',
-    clearable           : false,
-    backspaceRemoves    : false,
-    deleteRemoves       : false,
-    searchable          : false,
-    className           : '',
+    clearable           : true,
+    backspaceRemoves    : true,
+    deleteRemoves       : true,
+    searchable          : true,
     multi               : true,
+    className           : '',
   }
 
   constructor(props) {
