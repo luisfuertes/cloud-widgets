@@ -26,6 +26,7 @@
 ### MultiSelectInput
 ### Checkbox
 ### Button
+### TagInput
 
 
 ## Installation
@@ -35,7 +36,7 @@ For install:
 ## Usage
 ```
 import _ from 'lodash'
-import { FormUtils, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Button } from 'cloud-widgets'
+import { FormUtils, TextInput, TextAreaInput, SelectInput, MultiSelectInput, TagInput, Button } from 'cloud-widgets'
 
 ...
 

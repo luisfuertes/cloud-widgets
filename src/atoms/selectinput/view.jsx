@@ -22,10 +22,10 @@ export default class View extends React.Component {
     isFetching          : false,
     labelKey            : 'label',
     valueKey            : 'value',
-    clearable           : false,
-    backspaceRemoves    : false,
-    deleteRemoves       : false,
-    searchable          : false,
+    clearable           : true,
+    backspaceRemoves    : true,
+    deleteRemoves       : true,
+    searchable          : true,
     className           : '',
   }
 
@@ -89,6 +89,7 @@ export default class View extends React.Component {
               backspaceRemoves  = { this.props.backspaceRemoves }
               deleteRemoves     = { this.props.deleteRemoves }
               searchable        = { this.props.searchable }
+              
             />
             { this.state.touched && this.state.error && <span>{ this.state.error }</span> }
       </div>
