@@ -60,7 +60,6 @@ export default class View extends React.Component {
     
         return (
             <div className={ this.props.className }>
-                <label htmlFor={ this.props.id } >{ this.props.label } </label>
                 <input 
                     id          = { this.props.id }
                     type        = { this.props.type } 
@@ -70,6 +69,7 @@ export default class View extends React.Component {
                     value       = { this.props.value } 
                     checked     = { this.props.checkstatus }
                 />
+                <label htmlFor={ this.props.id } >{ this.props.label } </label>
                 { this.state.touched && this.state.error && <span>{ this.state.error }</span> }
             </div>
         )

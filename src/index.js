@@ -4,5 +4,6 @@ import SelectInput from './atoms/selectinput/'
 import MultiselectInput from './atoms/multiselectinput/'
 import Button from './atoms/button/'
 import Checkbox from './atoms/checkbox/'
+import TagInput from './atoms/taginput/'
 
-export { TextInput, TextareaInput, SelectInput, MultiselectInput, Button, Checkbox }
+export { TextInput, TextareaInput, SelectInput, MultiselectInput, Button, Checkbox, TagInput }

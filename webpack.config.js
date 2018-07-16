@@ -9,6 +9,7 @@ module.exports = {
     TextAreaInput: './src/atoms/textareainput/index.js',
     MultiSelectInput: './src/atoms/multiselectinput/index.js',
     Checkbox: './src/atoms/checkbox/index.js',
+    TagInput: './src/atoms/taginput/index.js',
     FormUtils: './src/utils/FormUtils.js'
   },
   output: {
