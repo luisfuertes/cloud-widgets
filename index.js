@@ -7,4 +7,4 @@ import Checkbox from './lib/Checkbox.js'
 import TagInput from './lib/TagInput.js'
 import * as FormUtils from './lib/FormUtils.js'
 
-export { Button, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Checkbox, FormUtils }
+export { Button, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Checkbox, TagInput, FormUtils }
