@@ -27,6 +27,8 @@
 ### Checkbox
 ### Button
 ### TagInput
+### RadioInput
+### RadioGroup
 
 
 ## Installation

@@ -10,6 +10,8 @@ module.exports = {
     MultiSelectInput: './src/atoms/multiselectinput/index.js',
     Checkbox: './src/atoms/checkbox/index.js',
     TagInput: './src/atoms/taginput/index.js',
+    RadioInput: './src/atoms/radioinput/index.js',
+    RadioGroup: './src/atoms/radiogroup/index.js',
     FormUtils: './src/utils/FormUtils.js'
   },
   output: {
