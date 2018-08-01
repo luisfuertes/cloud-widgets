@@ -7,6 +7,7 @@ import Checkbox from './lib/Checkbox.js'
 import TagInput from './lib/TagInput.js'
 import RadioInput from './lib/RadioInput.js'
 import RadioGroup from './lib/RadioGroup.js'
+import GeosuggestInput from './lib/GeosuggestInput.js'
 import * as FormUtils from './lib/FormUtils.js'
 
-export { Button, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Checkbox, TagInput, RadioInput, RadioGroup, FormUtils }
+export { Button, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Checkbox, TagInput, RadioInput, RadioGroup, GeosuggestInput, FormUtils }

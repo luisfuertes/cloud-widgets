@@ -1,6 +1,6 @@
 {
   "name": "cloud-widgets",
-  "version": "1.0.54",
+  "version": "1.0.55",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "Luis Fuertes <luis.fuertes@clouddistrict.com>",
   "license": "ISC",
   "dependencies": {
+    "react-geosuggest": "^2.8.0",
     "react-select": "^1.2.1",
     "react-spinkit": "^3.0.0",
     "style-loader": "^0.21.0",

@@ -29,6 +29,7 @@
 ### TagInput
 ### RadioInput
 ### RadioGroup
+### GeosuggestInput
 
 
 ## Installation

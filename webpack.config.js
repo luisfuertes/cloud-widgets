@@ -12,6 +12,7 @@ module.exports = {
     TagInput: './src/atoms/taginput/index.js',
     RadioInput: './src/atoms/radioinput/index.js',
     RadioGroup: './src/atoms/radiogroup/index.js',
+    GeosuggestInput: './src/atoms/geosuggestinput/index.js',
     FormUtils: './src/utils/FormUtils.js'
   },
   output: {
