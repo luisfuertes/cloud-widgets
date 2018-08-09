@@ -15,6 +15,7 @@ export default class View extends React.Component {
         onFocus             : () => {},
         checkstatus         : false,
         className           : '',
+        link                : null,
     }
 
     constructor( props ) {
@@ -39,6 +40,10 @@ export default class View extends React.Component {
 
     setValid(touched, valid, error) {
         this.setState({ touched, valid, error })
+    }
+
+    _onLinkTapped(link) {
+        window.open(link)
     }
     
     _onBlur(e) {
@@ -69,7 +74,7 @@ export default class View extends React.Component {
                     value       = { this.props.value } 
                     checked     = { this.props.checkstatus }
                 />
-                <label htmlFor={ this.props.id } >{ this.props.label } </label>
+                { this.props.link ? <a onClick={ () => this._onLinkTapped(this.props.link) }>{this.props.label}</a>: <label htmlFor={ this.props.id } >{ this.props.label } </label> }
                 { this.state.touched && this.state.error && <span>{ this.state.error }</span> }
             </div>
         )

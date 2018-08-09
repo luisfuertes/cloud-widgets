@@ -45,7 +45,7 @@ export function phoneValidation(phone) {
 }
 
 export function mandatoryValidate(value) {
-  if (value != null && value != '') {
+  if (value != null && value != '' && value != false) {
     return { isValid: true, error: '' }
   } else {
     return { isValid: false, error: 'Mandatory field' }
