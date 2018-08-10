@@ -8,7 +8,7 @@ var TagInput = require('./lib/TagInput.js')
 var RadioInput = require('./lib/RadioInput.js')
 var RadioGroup = require('./lib/RadioGroup.js')
 var GeosuggestInput = require('./lib/GeosuggestInput.js')
-//import * as FormUtils from './lib/FormUtils.js'
+var FormUtils = require('./lib/FormUtils.js')
 
 //export { Button, TextInput, TextAreaInput, SelectInput, MultiSelectInput, Checkbox, TagInput, RadioInput, RadioGroup, GeosuggestInput, FormUtils }
 module.exports = {
